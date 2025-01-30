@@ -191,9 +191,9 @@ async function main() {
   
  // Add an event listener to previous
  previous.addEventListener("click", ()=>{
-  curretnSongs.pause()
+  currentSong.pause()
 
-  let index = songs.indexOf(curretnSongs.src.split("/").pop())
+  let index = songs.indexOf(currentSong.src.split("/").pop())
   console.log(index)
   console.log(index-1);
   if((index - 1 )>=0){
@@ -206,9 +206,9 @@ async function main() {
 
  // Add an event listener to next
  next.addEventListener("click", ()=>{
-  curretnSongs.pause()
+  currentSong.pause()
 
-  let index = songs.indexOf(curretnSongs.src.split("/").pop())
+  let index = songs.indexOf(currentSong.src.split("/").pop())
 
   if((index+1)<songs.length){
     PlayMusic(songs[index+1])
