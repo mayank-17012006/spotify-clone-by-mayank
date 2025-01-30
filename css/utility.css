@@ -1,0 +1,19 @@
+.bg-grey{
+    background-color: #121212;
+}
+.flex {
+    display: flex;
+}
+.justify-content{
+    justify-content: center;
+}
+.m{
+    margin: 10px;
+}
+.gap{
+    gap: 10px;
+
+}
+.p{
+    padding: 10px;
+}

@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+
+    /* Apply to all scrollbars */
+    ::-webkit-scrollbar {
+        width: 10px;
+        /* Scrollbar width */
+    }
+
+
+}
+
+:root{
+    --a:0;
+}
+
+body {
+    background-color: black;
+}
+
+.invert {
+    filter: invert();
+}
+
+img {
+    size: 24px;
+}
+
+.right {
+    width: 75vw;
+}
+
+.right h1 {
+    font-size: medium;
+}
+
+.search {
+
+    padding: 20px;
+
+}
+
+.Library {
+
+    padding: 20px;
+    height: 70vh;
+
+}
+
+div {
+    border-radius: 7px;
+}
+
+.left {
+    width: 25vw;
+}
+
+
+
+.header {
+    justify-content: space-between;
+    background-color: rgb(34 34 34);
+    border-radius: 0px;
+    /* height: 60px; */
+    padding: 20px;
+}
+
+.btn {
+    background: transparent;
+    border-radius: 0px;
+    font-size: medium;
+    margin: 3px;
+    padding: 10px;
+    border: none;
+    color: grey;
+    font-weight: 700;
+}
+
+.btn2 {
+    background: white;
+    border-radius: 20px;
+    color: black;
+    font-weight: 100;
+}
+
+.card {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+
+
+}
+
+.playbtn {       transition: all 1s ease-out;
+    position: relative;
+    display: flex
+;
+    bottom: -127px;
+    right: -140px;
+    opacity: var(--a);
+    z-index: 2;
+
+    
+}
+.img{
+    position: relative;
+    top: -77px;
+     
+}
+.card:hover {
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    
+    opacity:var(--a);
+   --a: 1;
+}
+
+
+.card img {    width: 100%;
+    object-fit: contain;
+    position: relative;
+
+}
+
+.card h1 {
+    font-size: 26px;
+
+}
+
+.card * {
+    padding-top: 10px;
+}
+
+.Player {
+    position: fixed;
+    height: 100px;
+    background-color: #1d2626;
+    width: 72%;
+    margin: 10px;
+    direction: ltr;
+    display: flex;
+    bottom: 30px;
+    justify-content: center;
+    z-index: 3;
+}
+
+.playlist {
+    background-color: black;
+    border: 1px solid rgb(101, 101, 101);
+    margin: 22px 0;
+    border-radius: 6px;
+    font-size: 10px;
+    padding: 12px;
+    gap: 5px;
+    justify-content: center;
+    overflow: hidden visible;
+    max-height: 80%;
+}
+.mp3img{    height: 45px;
+    width: 45px;
+    margin: -9px 9px;
+
+}
+.playlist img {
+    margin: 12px;
+}
+
+.playlist div {
+    width: 100%;
+    font-size: small;
+}
+
+.playlist span {
+    padding-top: 12px;
+    font-size: medium;
+    width: 50%;
+}
+
+.play {
+    height: 80%;
+    overflow: hidden visible;
+}
+
+.playicons {
+    position: fixed;
+    bottom: 83px;
+    gap: 10px;
+    margin: 0.01rem 30rem;
+}
+
+.abovebar {
+    width: 71%;
+    justify-content: space-between;
+    height: 25px;
+    bottom: 97px;
+    position: fixed;
+    gap: 253px;
+}
+
+.bar {
+    height: 5px;
+    position: fixed;
+    bottom: 60px;
+    background-color: white;
+    width: 70%;
+    cursor: pointer;
+}
+
+.circle {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+
+}
+
+.abovebar img {
+    filter: invert(1);
+}
+
+.cards {
+    margin: 10px 57px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh;
+
+}
+
+.input {
+    cursor: pointer;
+}
+
+.range img {
+    cursor: pointer;
+}
+
+.inputbar {
+    accent-color: orange;
+}
+.songinfo {
+    color: black;
+    padding: 0 12px;
+    width: 250px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.close {
+    display: none;
+}
+
+
+
+@media (max-width: 1200px){
+
+    .abovebar{flex-direction: column;
+        gap: 23px;
+        align-items: center;}
+
+    .left {
+        position: absolute;
+        left: -130%;
+        transition: all .3s;
+        z-index: 1;
+        width: 373px;
+        background-color: black;
+        padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+    }
+    
+    .songinfo,
+    .songtime {
+        width: auto;
+    }
+
+    .playicons{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    
+    .left .close {
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+    }
+    .timevol {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
+    }
+    .right {
+        width: 100vw;
+    }
+    .Player {
+        width: calc(100vw - 75px); 
+    }
+    .bar {
+        width: calc(100vw - 120px);
+        bottom: 21px;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+    .right {
+        margin: 0;
+    }
+    
+    .card {
+        width: 55vw;
+        
+        display: inline-table;
+    }
+    
+    .cards {
+        margin: 0;
+        justify-content: center; 
+        
+    }
+    .close {
+        display: block;
+    }
+    
+    .abovebar {        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        bottom: 154px;
+    }
+    
+    .cards
+        {
+        max-height: unset;
+        overflow-y: unset;
+        margin-bottom: 35vh;
+    }
+    .Player {
+        bottom: 0px;
+        right: 25px;
+        height: 200px;
+    }
+    .songname{
+        top: 0px;
+    }
+
+    .playicons {
+        position: fixed;
+        bottom: 97px;
+        gap: 10px;
+        margin: 0.01rem 30rem;
+    }
+}
+    @media (max-width: 500px) {
+        .card {
+            width: 100%;
+        }
+    
+        .header>* {
+            padding: 2px;
+        }
+    
+        .buttons>* {
+            margin: 0 6px;
+        }
+    
+        .header{
+            padding: 7px;
+        }
+    
+        .playlist h1 {
+            padding: 4px;
+        }
+    
+        .Library{
+            height: 85vh;
+        }
+    
+        .left{ 
+            width: 100vw;
+        }
+        .player{
+            bottom: 0px;
+            right: 20px;
+            height: fit-content;
+            width: 100%;
+        }
+        .playbtn{
+            position: relative;
+            left: 9px;
+            bottom: -200px;
+        }
+    
+       
+    
+        
+    }
