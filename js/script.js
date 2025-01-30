@@ -1,7 +1,7 @@
 let songs;
 let currentSong = new Audio();  // Audio element
 let currentFolder = "";
-
+getmp3img("https://raw.githubusercontent.com/mayank-17012006/spotify-clone-by-mayank/main/songs/Diljit/Tum%20Se%20Hi.mp3",".mp3img");
 function getmp3img(mp3Path, pathimg) {
   fetch(mp3Path)
     .then(response => response.arrayBuffer())
@@ -83,6 +83,8 @@ async function getSongs(folder) {
   Array.from(songDIV.querySelectorAll(".playlist")).forEach((element, index) => {
     element.addEventListener("click", () => {
       PlayMusic(songs[index]);
+
+      
     });
   });
 
@@ -170,7 +172,15 @@ async function main() {
     document.querySelector(".circle").style.left = percent + "%";
     currentSong.currentTime = ((currentSong.duration) * percent) / 100;
   });
-
+  currentSong.addEventListener("ended", () => {
+    let index = songs.indexOf(currentSong.src);
+  
+    if (index + 1 < songs.length) {
+      PlayMusic(songs[index + 1]);
+    } else {
+      PlayMusic(songs[0]); // Loop back to the first song
+    }
+  });
   // Volume functionality
   document.querySelector(".range input").addEventListener("change", (e) => {
     currentSong.volume = parseInt(e.target.value) / 100;
